@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-15T22:41:44.351Z",
+    "end": "2023-04-15T22:42:20.024Z",
+    "duration": 35673,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00a511a9-8f11-4ab8-89f9-843a7c07172c",
+      "title": "",
+      "fullFile": "cypress/e2e/test.spec.js",
+      "file": "cypress/e2e/test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "51883763-be50-4ac9-a0c0-3c092f1a40f8",
+          "title": "My second test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Child window two",
+              "fullTitle": "My second test suite Child window two",
+              "timedOut": null,
+              "duration": 11566,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"#opentab\").invoke(\"removeAttr\", \"target\").click();\ncy.url().should(\"include\", \"qaclickacademy\");\ncy.go(\"back\");\ncy.url().should(\"contain\", \"https://rahulshettyacademy.com/AutomationPractice/\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: expected '' to include 'qaclickacademy'",
+                "estack": "AssertionError: Timed out retrying after 6000ms: expected '' to include 'qaclickacademy'\n    at Context.eval (webpack:///./cypress/e2e/test.spec.js:20:13)",
+                "diff": null
+              },
+              "uuid": "50e489fa-a678-4ca9-a2d3-2dc5edd4ae4e",
+              "parentUUID": "51883763-be50-4ac9-a0c0-3c092f1a40f8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "50e489fa-a678-4ca9-a2d3-2dc5edd4ae4e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

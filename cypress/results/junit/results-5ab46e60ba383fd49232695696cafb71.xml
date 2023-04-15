@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="27.585" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-04-15T22:41:10" tests="0" file="cypress/e2e/2test.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="My test suite" timestamp="2023-04-15T22:41:10" tests="1" time="26.796" failures="1">
+    <testcase name="My test suite My first test case" time="17.603" classname="My first test case">
+      <failure message="Timed out retrying after 6050ms: `cy.click()` failed because this element is not visible:
+
+`&lt;a class=&quot;nav-link btn btn-primary&quot;&gt;...&lt;/a&gt;`
+
+This element `&lt;a.nav-link.btn.btn-primary&gt;` is not visible because its parent `&lt;div#navbarResponsive.collapse.navbar-collapse&gt;` has CSS property: `display: none`
+
+Fix this problem, or use `{force: true}` to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with" type="CypressError"><![CDATA[CypressError: Timed out retrying after 6050ms: `cy.click()` failed because this element is not visible:
+
+`<a class="nav-link btn btn-primary">...</a>`
+
+This element `<a.nav-link.btn.btn-primary>` is not visible because its parent `<div#navbarResponsive.collapse.navbar-collapse>` has CSS property: `display: none`
+
+Fix this problem, or use `{force: true}` to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+    at runVisibilityCheck (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:151815:66)
+    at Object.isStrictlyVisible (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:151829:10)
+    at runAllChecks (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:130499:26)
+    at retryActionability (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:130567:16)
+    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8914:23)
+    at Promise.attempt.Promise.try (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6188:29)
+    at whenStable (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:146641:65)
+    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:146082:14)
+    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8914:23)
+    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6849:31)
+    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6906:18)
+    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6951:10)
+    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7031:18)
+    at Promise._fulfill (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6975:18)
+    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8589:46)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/2test.spec.js:21:31)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

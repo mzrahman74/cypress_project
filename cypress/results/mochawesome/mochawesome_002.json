@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-15T22:41:09.732Z",
+    "end": "2023-04-15T22:41:37.317Z",
+    "duration": 27585,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3a1507eb-63b7-45fe-9b74-ce160d6051e1",
+      "title": "",
+      "fullFile": "cypress/e2e/2test.spec.js",
+      "file": "cypress/e2e/2test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02fc30a2-0121-4a45-8a0b-9c0b8f4b3a44",
+          "title": "My test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My first test case",
+              "fullTitle": "My test suite My first test case",
+              "timedOut": null,
+              "duration": 8909,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/angularpractice/\");\ncy.fixture(\"example\").then(data => {\n  _HomePage.onHomePage.getEditBox().type(data.name);\n  _HomePage.onHomePage.getGender().select(data.gender);\n  _HomePage.onHomePage.getTwoWayDataBinding().should(\"have.value\", \"bob\");\n  _HomePage.onHomePage.getMinLength().should(\"have.attr\", \"minlength\", \"2\");\n  _HomePage.onHomePage.getEnterpreneurRadio().should(\"be.visible\");\n  _HomePage.onHomePage.getShopTab().click();\n  data.productName.forEach(element => {\n    cy.selectProduct(element);\n  });\n  _ShopPage.onShopPage.getCheckout().click();\n  _ShopPage.onShopPage.productTotal();\n  _CheckoutPage.onCheckoutPage.getCartCheckOut().click();\n  _CheckoutPage.onCheckoutPage.getLocation();\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 6050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"nav-link btn btn-primary\">...</a>`\n\nThis element `<a.nav-link.btn.btn-primary>` is not visible because its parent `<div#navbarResponsive.collapse.navbar-collapse>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 6050ms: `cy.click()` failed because this element is not visible:\n\n`<a class=\"nav-link btn btn-primary\">...</a>`\n\nThis element `<a.nav-link.btn.btn-primary>` is not visible because its parent `<div#navbarResponsive.collapse.navbar-collapse>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at runVisibilityCheck (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:151815:66)\n    at Object.isStrictlyVisible (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:151829:10)\n    at runAllChecks (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:130499:26)\n    at retryActionability (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:130567:16)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise.attempt.Promise.try (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6188:29)\n    at whenStable (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:146641:65)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:146082:14)\n    at tryCatcher (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise._settlePromiseFromHandler (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6849:31)\n    at Promise._settlePromise (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6906:18)\n    at Promise._settlePromise0 (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6951:10)\n    at Promise._settlePromises (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:7031:18)\n    at Promise._fulfill (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:6975:18)\n    at <unknown> (https://rahulshettyacademy.com/__cypress/runner/cypress_runner.js:8589:46)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/2test.spec.js:21:31)",
+                "diff": null
+              },
+              "uuid": "35d42bf0-4fa1-4be4-aeaa-c1c23bbc95be",
+              "parentUUID": "02fc30a2-0121-4a45-8a0b-9c0b8f4b3a44",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "35d42bf0-4fa1-4be4-aeaa-c1c23bbc95be"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 8909,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
