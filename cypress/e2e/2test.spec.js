@@ -18,7 +18,7 @@ describe("My test suite", () => {
       data.productName.forEach(element => {
         cy.selectProduct(element);
       });
-      onShopPage.getCheckout().click();
+      onShopPage.getCheckout().click({ force: true });
       onShopPage.productTotal();
       onCheckoutPage.getCartCheckOut().click();
       onCheckoutPage.getLocation();

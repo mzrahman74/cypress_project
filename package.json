@@ -4,7 +4,7 @@
   "description": "current cypress version",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run",
+    "test": "npm run prereport && npx cypress run --spec 'cypress/e2e/2test.spec.js'; npm run junit:merge; npm run mochawesome:merge",
     "delete:reports": "rm -r cypress/results/* || true",
     "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "junit:merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
@@ -13,11 +13,12 @@
     "cypress:e2e": "npm run cypress:run; npm run junit:merge; npm run mochawesome:merge",
     "chromeTest": "npm run test -- --browser chrome",
     "cySpec": "npx cypress run --spec 'cypress/e2e/test.spec.js' --browser firefox",
-    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/2test.spec.js' --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
+    "cy:run_spec": "npm run prereport && npx cypress run --spec 'cypress/e2e/2test.spec.js'; npm run junit:merge; npm run mochawesome:merge; --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
     "cy:run_e2e": "npx cypress run --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
     "cy:run_parallel": "npx cypress run --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --parallel",
     "cyWebKit": "npx cypress run --spec 'cypress/e2e/test.spec.js/' --browser webkit",
-    "cy:run_para_e2e": "npm run cy:run_e2e --browser firefox --group firefox --ci-build-id 1 & npm run cy:run_e2e --browser chrome --group chrome --ci-build-id 1",
+    "cy:run_para_e2e": "npm run cy:run_e2e --browser firefox --ci-build-id 1 & npm run cy:run_e2e --browser chrome --ci-build-id 1",
+    "cy:run_para_spec": "npm run cy:run_spec --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --browser chrome --group chrome  & npm run cy:run_spec --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --browser electron --group electron",
     "browsers": "npm run cySpec & npm run cyWebKit & npm run chromeTest",
     "cy:run_browser": "npx cypress run --spec 'cypress/e2e/2test.spec.js' --browser firefox & npx cypress run --spec 'cypress/e2e/inv.spec.js' --browser chrome"
   },
@@ -32,14 +33,15 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
-    "playwright-webkit": "^1.29.2",
     "cypress-multi-reporters": "^1.6.3",
     "junit-merge": "^2.0.0",
     "mocha": "^10.2.0",
     "mocha-junit-reporter": "^2.2.0",
     "mochawesome": "7.1.3",
     "mochawesome-merge": "^4.2.2",
-    "mochawesome-report-generator": "6.2.0"
+    "mochawesome-report-generator": "6.2.0",
+    "playwright-webkit": "^1.29.2"
   }
 }
