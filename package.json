@@ -12,15 +12,13 @@
     "cypress:run": " npm run prereport && npx cypress run",
     "cypress:e2e": "npm run cypress:run; npm run junit:merge; npm run mochawesome:merge",
     "chromeTest": "npm run test -- --browser chrome",
-    "cySpec": "npx cypress run --spec 'cypress/e2e/test.spec.js' --browser firefox",
-    "cy:run_spec": "npm run prereport && npx cypress run --spec 'cypress/e2e/2test.spec.js'; npm run junit:merge; npm run mochawesome:merge; --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
     "cy:run_e2e": "npx cypress run --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
     "cy:run_parallel": "npx cypress run --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --parallel",
     "cyWebKit": "npx cypress run --spec 'cypress/e2e/test.spec.js/' --browser webkit",
     "cy:run_para_e2e": "npm run cy:run_e2e --browser firefox --ci-build-id 1 & npm run cy:run_e2e --browser chrome --ci-build-id 1",
-    "cy:run_para_spec": "npm run cy:run_spec --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --browser chrome --group chrome  & npm run cy:run_spec --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --browser electron --group electron",
-    "browsers": "npm run cySpec & npm run cyWebKit & npm run chromeTest",
-    "cy:run_browser": "npx cypress run --spec 'cypress/e2e/2test.spec.js' --browser firefox & npx cypress run --spec 'cypress/e2e/inv.spec.js' --browser chrome"
+    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/2test.spec.js/' --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
+    "cy:run_browser": "npm run cy:run_spec -- --browser firefox --group Firefox --ci-build-id 1 & npm run cy:run_spec -- --browser chrome --group Chrome --ci-build-id 1",
+    "cy:run_jenkins": "npm run cy:run_spec -- --browser firefox --group Firefox  & npm run cy:run_spec -- --browser chrome --group Chrome"
   },
   "repository": {
     "type": "git",

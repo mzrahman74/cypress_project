@@ -4,7 +4,7 @@ module.exports = defineConfig({
   viewportHeight: 1536,
   viewportWidth: 960,
   defaultCommandTimeout: 6000,
-  video: false,
+  video: true,
   projectId: "ukx291",
   reporter: "cypress-multi-reporters",
   reporterOptions: {
