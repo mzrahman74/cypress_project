@@ -1,6 +1,7 @@
 /// <reference types="cypress"/>
 /// <reference types="cypress-iframe"/>
 import "cypress-iframe";
+import { curry } from "cypress/types/lodash";
 /**
  * cypress won't support child window, just go to the child window url
  */
@@ -43,7 +44,7 @@ describe("My second test suite", () => {
       expect(str).to.equal("Hello , Are you sure you want to confirm?");
     });
     cy.get("#opentab").invoke("removeAttr", "target").click();
-    //cy.url().should("include", "rahulshettyacademy");
+    cy.url().should("include", "rahulshettyacademy");
     cy.go("back");
     cy.url().should("contain", "https://rahulshettyacademy.com/AutomationPractice/");
   });
