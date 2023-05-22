@@ -42,3 +42,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+# report
+/results
+/mochawesome-report
+/mochawesome.html
+/mochawesome.json
+/package-lock.json

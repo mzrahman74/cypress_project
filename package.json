@@ -14,11 +14,11 @@
     "chromeTest": "npm run test -- --browser chrome",
     "cy:run_e2e": "npx cypress run --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
     "cy:run_parallel": "npx cypress run --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd --parallel",
-    "cyWebKit": "npx cypress run --spec 'cypress/e2e/test.spec.js/' --browser webkit",
+    "cyWebKit": "npx cypress run --spec 'cypress/e2e/2test.spec.js/' --browser webkit",
     "cy:run_para_e2e": "npm run cy:run_e2e --browser firefox --ci-build-id 1 & npm run cy:run_e2e --browser chrome --ci-build-id 1",
     "cy:run_spec": "npx cypress run --spec 'cypress/e2e/2test.spec.js/' --record --key f14b6f35-801a-4b0b-87ee-345aebb9babd",
-    "cy:run_browser": "npm run cy:run_spec -- --browser firefox --group Firefox --ci-build-id 1 & npm run cy:run_spec -- --browser chrome --group Chrome --ci-build-id 1",
-    "cy:run_jenkins": "npm run cy:run_spec -- --browser firefox --group Firefox  & npm run cy:run_spec -- --browser chrome --group Chrome"
+    "cy:run_browser": "npm run cy:run_spec -- --browser webkit --group Webkit --ci-build-id 1 & npm run cy:run_spec -- --browser chrome --group Chrome --ci-build-id 1",
+    "cy:run_jenkins": "npm run cy:run_spec -- --browser webkit --group Webkit  & npm run cy:run_spec -- --browser chrome --group Chrome"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,6 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.3.0",
-    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-iframe": "^1.0.1",
     "cypress-multi-reporters": "^1.6.3",
     "junit-merge": "^2.0.0",
