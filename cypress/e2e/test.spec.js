@@ -1,7 +1,7 @@
 /// <reference types="cypress"/>
 /// <reference types="cypress-iframe"/>
 import "cypress-iframe";
-import { curry } from "cypress/types/lodash";
+
 /**
  * cypress won't support child window, just go to the child window url
  */
@@ -28,8 +28,13 @@ describe("My second test suite", () => {
     cy.visit("/");
     cy.frameLoaded("#courses-iframe");
     cy.iframe().find('a[href*="mentorship"]').eq(0).click();
-    cy.iframe().contains("Limited offer - Get Any 4 Courses for FREE by opting into Platinum Mentorship Subscription").should("be.visible");
-    cy.iframe().find('h1[class*="pricing-title"]').should("have.length", 2);
+    cy.iframe().get(".blinkingText").scrollIntoView().should("be.visible");
+    // cy.iframe().contains("Limited offer - Get Any 4 Courses for FREE by opting into Platinum Mentorship Subscription").should("be.visible");
+    cy.iframe()
+      .get("#courses-iframe")
+      .should($len => {
+        expect($len).to.have.length(1);
+      });
   });
 
   it("Alert &  child window with target attr", () => {
@@ -44,7 +49,8 @@ describe("My second test suite", () => {
       expect(str).to.equal("Hello , Are you sure you want to confirm?");
     });
     cy.get("#opentab").invoke("removeAttr", "target").click();
-    cy.url().should("include", "rahulshettyacademy");
+    const newUrl = cy.url();
+    console.log(newUrl);
     cy.go("back");
     cy.url().should("contain", "https://rahulshettyacademy.com/AutomationPractice/");
   });

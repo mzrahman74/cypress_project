@@ -4,7 +4,7 @@ module.exports = defineConfig({
   viewportHeight: 1536,
   viewportWidth: 960,
   defaultCommandTimeout: 6000,
-  video: true,
+  video: false,
   projectId: "ukx291",
   reporter: "cypress-multi-reporters",
   reporterOptions: {
@@ -17,7 +17,7 @@ module.exports = defineConfig({
 
   e2e: {
     baseUrl: "https://rahulshettyacademy.com/AutomationPractice/",
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
+    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
     excludeSpecPattern: ["**/1-getting-started/*", "**/2-advanced-examples/*"],
     experimentalWebKitSupport: true,
 

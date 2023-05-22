@@ -1,11 +1,13 @@
 /// <reference types="cypress"/>
 import example from "../fixtures/example.json";
 import { onCheckoutPage } from "../support/pageObjects/CheckoutPage";
+import { onChildWindowPage } from "../support/pageObjects/ChildWindowPage";
 import { onHomePage } from "../support/pageObjects/HomePage";
 import { onShopPage } from "../support/pageObjects/ShopPage";
+import { onTablePage } from "../support/pageObjects/TablePage";
 
 describe("My test suite", () => {
-  it("My first test case", () => {
+  it("Purchased product", () => {
     cy.visit("https://rahulshettyacademy.com/angularpractice/");
     cy.fixture("example").then(data => {
       onHomePage.getEditBox().type(data.name);
@@ -25,11 +27,9 @@ describe("My test suite", () => {
     });
   });
   it("child window 2nd test with target attribute", () => {
-    cy.visit("https://the-internet.herokuapp.com/");
-    cy.get('a[href="/windows"]').click();
-    cy.get('a[href="/windows/new"]').invoke("removeAttr", "target").click();
-    cy.url().should("include", "new");
-    cy.go("back");
-    cy.url().should("contain", "https://the-internet.herokuapp.com/windows");
+    onChildWindowPage.getChildWindowAndBack();
+  });
+  it("scan the table then select the python and price", () => {
+    onTablePage.scanTableRow();
   });
 });
