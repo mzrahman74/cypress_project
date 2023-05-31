@@ -37,7 +37,7 @@ describe("My second test suite", () => {
       });
   });
 
-  it("Alert &  child window with target attr", () => {
+  it("Alert message", () => {
     cy.visit("/");
     cy.get("#alertbtn").click();
     cy.on("window:alert", str => {
@@ -48,14 +48,10 @@ describe("My second test suite", () => {
     cy.on("window:confirm", str => {
       expect(str).to.equal("Hello , Are you sure you want to confirm?");
     });
-    cy.get("#opentab").invoke("removeAttr", "target").click();
-    const newUrl = cy.url();
-    console.log(newUrl);
-    cy.go("back");
-    cy.url().should("contain", "https://rahulshettyacademy.com/AutomationPractice/");
   });
 
-  it("scan from table", () => {
+  it("scan from table and find python course and price ", () => {
+    cy.visit("/");
     cy.get("tr td:nth-child(2)").each(($el, index, $list) => {
       const text = $el.text();
       if (text.includes("Python")) {
@@ -69,6 +65,36 @@ describe("My second test suite", () => {
       }
     });
   });
+  it("scan from table find Resume and price", () => {
+    cy.visit("/");
+    cy.get("tr td:nth-child(2)").each((el, index, list) => {
+      const text = el.text();
+      if (text.includes("JMETER")) {
+        cy.get("tr td:nth-child(1)")
+          .eq(index)
+          .then(author => {
+            const authorName = author.text();
+            expect(authorName).to.equal("Rahul Shetty");
+          });
+      }
+    });
+  });
+  it.only("scan from table and find Jack for engineer instructor", () => {
+    cy.visit("/");
+    cy.contains("Web Table Fixed header").should("be.visible");
+    cy.get("tr td:nth-child(1)").each((el, index, list) => {
+      const text = el.text();
+      if (text.includes("Jack")) {
+        cy.get("tr td:nth-child(1)")
+          .eq(index)
+          .then(author => {
+            const authorName = author.text();
+            expect(authorName).to.include("Jack");
+          });
+      }
+    });
+  });
+
   it("mouse over", () => {
     cy.visit("/");
     cy.get("div.mouse-hover-content").invoke("show");
