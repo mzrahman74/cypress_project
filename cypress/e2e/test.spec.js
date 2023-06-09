@@ -29,7 +29,7 @@ describe("My second test suite", () => {
     cy.frameLoaded("#courses-iframe");
     cy.iframe().find('a[href*="mentorship"]').eq(0).click();
     cy.iframe().get(".blinkingText").scrollIntoView().should("be.visible");
-    // cy.iframe().contains("Limited offer - Get Any 4 Courses for FREE by opting into Platinum Mentorship Subscription").should("be.visible");
+    //cy.iframe().contains("Limited offer - Get Any 4 Courses for FREE by opting into Platinum Mentorship Subscription").should("be.visible");
     cy.iframe()
       .get("#courses-iframe")
       .should($len => {
@@ -79,7 +79,7 @@ describe("My second test suite", () => {
       }
     });
   });
-  it.only("scan from table and find Jack for engineer instructor", () => {
+  it("scan from table and find Jack for engineer instructor", () => {
     cy.visit("/");
     cy.contains("Web Table Fixed header").should("be.visible");
     cy.get("tr td:nth-child(1)").each((el, index, list) => {
