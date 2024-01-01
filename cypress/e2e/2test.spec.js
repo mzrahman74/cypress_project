@@ -32,7 +32,7 @@ describe("My test suite", () => {
   it("scan the table then select the python and price", () => {
     onTablePage.scanTableRow();
   });
-  it.only("scan the table then select the SQL and price", () => {
+  it("scan the table then select the SQL and price", () => {
     onTablePage.scanSqlRow();
   });
 });

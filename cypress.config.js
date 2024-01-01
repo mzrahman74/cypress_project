@@ -23,6 +23,14 @@ module.exports = defineConfig({
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      on("task", {
+        setHref: val => {
+          return (href = val);
+        },
+        getHref: () => {
+          return href;
+        }
+      });
     }
   }
 });

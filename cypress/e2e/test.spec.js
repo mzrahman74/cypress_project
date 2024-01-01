@@ -65,6 +65,7 @@ describe("My second test suite", () => {
       }
     });
   });
+
   it("scan from table find Resume and price", () => {
     cy.visit("/");
     cy.get("tr td:nth-child(2)").each((el, index, list) => {
@@ -79,6 +80,7 @@ describe("My second test suite", () => {
       }
     });
   });
+
   it("scan from table and find Jack for engineer instructor", () => {
     cy.visit("/");
     cy.contains("Web Table Fixed header").should("be.visible");
@@ -90,6 +92,21 @@ describe("My second test suite", () => {
           .then(author => {
             const authorName = author.text();
             expect(authorName).to.include("Jack");
+          });
+      }
+    });
+  });
+
+  it("scan from table and find Smith Cricketer city", () => {
+    cy.visit("/");
+    cy.get("tr td:nth-child(1)").each((el, index, list) => {
+      const text = el.text();
+      if (text.includes("Smith")) {
+        cy.get("tr td:nth-child(3)")
+          .eq(index)
+          .then(city => {
+            const cityName = city.text();
+            expect(cityName).to.include("Delhi");
           });
       }
     });
