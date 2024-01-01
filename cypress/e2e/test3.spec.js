@@ -9,6 +9,7 @@ describe("Suite one", () => {
       cy.wait(3000);
     });
   });
+
   it("child window 2nd test with target attribute", () => {
     cy.visit("https://the-internet.herokuapp.com/");
     cy.get('a[href="/windows"]').click();

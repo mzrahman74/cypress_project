@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="28.278" tests="4" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-12-28T14:20:59" tests="0" file="cypress/e2e/2test.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="My test suite" timestamp="2023-12-28T14:20:59" tests="4" time="28.251" failures="0">
+    <testcase name="My test suite Purchased product" time="11.393" classname="Purchased product">
+    </testcase>
+    <testcase name="My test suite child window 2nd test with target attribute" time="1.444" classname="child window 2nd test with target attribute">
+    </testcase>
+    <testcase name="My test suite scan the table then select the python and price" time="8.278" classname="scan the table then select the python and price">
+    </testcase>
+    <testcase name="My test suite scan the table then select the SQL and price" time="2.350" classname="scan the table then select the SQL and price">
+    </testcase>
+  </testsuite>
+</testsuites>
