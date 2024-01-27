@@ -66,7 +66,7 @@ describe("My second test suite", () => {
     });
   });
 
-  it.only("Scan table for selenium", () => {
+  it("Scan table for selenium", () => {
     cy.visit("/");
     cy.get("tr td:nth-child(2)").eath((el, index, list) => {
       const text = el.text();

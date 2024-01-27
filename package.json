@@ -31,7 +31,7 @@
   "author": "Mohammad Rahman",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.3.0",
+    "cypress": "^13.6.3",
     "cypress-iframe": "^1.0.1",
     "cypress-multi-reporters": "^1.6.3",
     "junit-merge": "^2.0.0",
