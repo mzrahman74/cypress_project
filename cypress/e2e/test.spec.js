@@ -66,6 +66,21 @@ describe("My second test suite", () => {
     });
   });
 
+  it.only("Scan table for selenium", () => {
+    cy.visit("/");
+    cy.get("tr td:nth-child(2)").eath((el, index, list) => {
+      const text = el.text();
+      if (text.includes("Selenium")) {
+        cy.get("tr td:nth-child(1)")
+          .eq(index)
+          .then(author => {
+            const authorName = author.text();
+            expect(authorName).to.equal("Rahul Shetty");
+          });
+      }
+    });
+  });
+
   it("scan from table find Resume and price", () => {
     cy.visit("/");
     cy.get("tr td:nth-child(2)").each((el, index, list) => {

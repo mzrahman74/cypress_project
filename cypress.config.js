@@ -1,4 +1,6 @@
 const { defineConfig } = require("cypress");
+const excelToJson = require("convert-excel-to-json");
+const fs = require("fs");
 
 module.exports = defineConfig({
   viewportHeight: 1536,
@@ -29,6 +31,15 @@ module.exports = defineConfig({
         },
         getHref: () => {
           return href;
+        }
+      });
+
+      on("task", {
+        excelToJsonConverter(filePath) {
+          const result = excelToJson({
+            source: fs.readFileSync(filePath) // fs.readFileSync return a Buffer
+          });
+          return result;
         }
       });
     }
