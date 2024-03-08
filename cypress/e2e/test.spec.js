@@ -68,7 +68,7 @@ describe("My second test suite", () => {
 
   it("Scan table for selenium", () => {
     cy.visit("/");
-    cy.get("tr td:nth-child(2)").eath((el, index, list) => {
+    cy.get("tr td:nth-child(2)").each((el, index, list) => {
       const text = el.text();
       if (text.includes("Selenium")) {
         cy.get("tr td:nth-child(1)")
@@ -107,6 +107,22 @@ describe("My second test suite", () => {
           .then(author => {
             const authorName = author.text();
             expect(authorName).to.include("Jack");
+          });
+      }
+    });
+  });
+
+  it("scan from table and find Ivory for Receptionist name", () => {
+    cy.visit("/");
+    cy.contains("Web Table Fixed header").should("be.visible");
+    cy.get("tr td:nth-child(1)").each((el, index, list) => {
+      const text = el.text();
+      if (text.includes("Ivory")) {
+        cy.get("tr td:nth-child(1)")
+          .eq(index)
+          .then(name => {
+            const nameText = name.text();
+            expect(nameText).to.be.equal("Ivory");
           });
       }
     });
