@@ -14,7 +14,7 @@ export class ShopPage {
         var res = actualText.split(" ");
         res = res[1].trim();
         // convert string to number
-        // since javaScript async need to finis promise with then
+        // since javaScript async need to finish promise with then
         sum = Number(sum) + Number(res);
       })
       .then(() => {
