@@ -50,3 +50,5 @@ Thumbs.db
 /package-lock.json
 cypress/results/
 cypress/screenshots/
+downloads
+
