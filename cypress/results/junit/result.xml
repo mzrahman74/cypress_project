@@ -1,15 +1,99 @@
 <?xml version="1.0"?>
 <testsuites>
-<testsuite name="Root Suite" timestamp="2023-12-28T14:20:59" tests="0" file="cypress/e2e/2test.spec.js" time="0.000" failures="0"></testsuite>
-<testsuite name="My test suite" timestamp="2023-12-28T14:20:59" tests="4" time="28.251" failures="0">
+<testsuite name="Root Suite" timestamp="2024-04-25T16:03:30" tests="0" file="cypress/e2e/pracrice.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Actions" timestamp="2024-04-25T16:03:30" tests="4" time="4.054" failures="0">
   
-  <testcase name="My test suite Purchased product" time="11.393" classname="Purchased product"></testcase>
+  <testcase name="Actions trigger a range input (slider)" time="0.608" classname="trigger a range input (slider)"></testcase>
   
-  <testcase name="My test suite child window 2nd test with target attribute" time="1.444" classname="child window 2nd test with target attribute"></testcase>
+  <testcase name="Actions .as() - alias a route for later use" time="0.595" classname=".as() - alias a route for later use"></testcase>
   
-  <testcase name="My test suite scan the table then select the python and price" time="8.278" classname="scan the table then select the python and price"></testcase>
+  <testcase name="Actions cy.getCookies() - get browser cookies" time="0.270" classname="cy.getCookies() - get browser cookies"></testcase>
   
-  <testcase name="My test suite scan the table then select the SQL and price" time="2.350" classname="scan the table then select the SQL and price"></testcase>
+  <testcase name="Actions cy.request() - pass result to the second request" time="0.282" classname="cy.request() - pass result to the second request"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:01:57" tests="0" file="cypress/e2e/2test.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="My test suite" timestamp="2024-04-25T16:01:57" tests="4" time="50.990" failures="0">
+  
+  <testcase name="My test suite Purchased product" time="13.394" classname="Purchased product"></testcase>
+  
+  <testcase name="My test suite child window 2nd test with target attribute" time="2.511" classname="child window 2nd test with target attribute"></testcase>
+  
+  <testcase name="My test suite scan the table then select the python and price" time="9.606" classname="scan the table then select the python and price"></testcase>
+  
+  <testcase name="My test suite scan the table then select the SQL and price" time="5.880" classname="scan the table then select the SQL and price"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:03:03" tests="0" file="cypress/e2e/apiTest.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="api test with request" timestamp="2024-04-25T16:03:03" tests="1" time="1.164" failures="0">
+  
+  <testcase name="api test with request api test" time="1.037" classname="api test"></testcase>
+  
+</testsuite>
+
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:03:40" tests="0" file="cypress/e2e/session.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="JWT Session" timestamp="2024-04-25T16:03:40" tests="1" time="0.116" failures="0">
+  
+  <testcase name="JWT Session is logged in through local storage" time="0.053" classname="is logged in through local storage"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:03:13" tests="0" file="cypress/e2e/excel.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="JWT Session" timestamp="2024-04-25T16:03:13" tests="1" time="0.245" failures="0">
+  
+  <testcase name="JWT Session is logged in through local storage" time="0.159" classname="is logged in through local storage"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:03:44" tests="0" file="cypress/e2e/test.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="My second test suite" timestamp="2024-04-25T16:03:44" tests="3" time="19.015" failures="0">
+  
+  <testcase name="My second test suite Child window one " time="14.031" classname="Child window one "></testcase>
+  
+  <testcase name="My second test suite Child window two" time="1.346" classname="Child window two"></testcase>
+  
+  <testcase name="My second test suite upload test file" time="0.771" classname="upload test file"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:01:57" tests="0" file="cypress/e2e/2test.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="My test suite" timestamp="2024-04-25T16:01:57" tests="4" time="106.017" failures="0">
+  
+  <testcase name="My test suite Purchased product" time="13.169" classname="Purchased product"></testcase>
+  
+  <testcase name="My test suite child window 2nd test with target attribute" time="3.728" classname="child window 2nd test with target attribute"></testcase>
+  
+  <testcase name="My test suite scan the table then select the python and price" time="16.362" classname="scan the table then select the python and price"></testcase>
+  
+  <testcase name="My test suite scan the table then select the SQL and price" time="4.490" classname="scan the table then select the SQL and price"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:04:06" tests="0" file="cypress/e2e/test3.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Suite one" timestamp="2024-04-25T16:04:06" tests="2" time="20.094" failures="0">
+  
+  <testcase name="Suite one child window open" time="16.512" classname="child window open"></testcase>
+  
+  <testcase name="Suite one child window 2nd test with target attribute" time="1.225" classname="child window 2nd test with target attribute"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:04:29" tests="0" file="cypress/e2e/tsk.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Href visit" timestamp="2024-04-25T16:04:29" tests="2" time="13.678" failures="0">
+  
+  <testcase name="Href visit captures href" time="0.484" classname="captures href"></testcase>
+  
+  <testcase name="Href visit visit href" time="8.914" classname="visit href"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2024-04-25T16:03:19" tests="0" file="cypress/e2e/fake_api.spec.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Api intercept" timestamp="2024-04-25T16:03:19" tests="1" time="2.920" failures="0">
+  
+  <testcase name="Api intercept api test" time="2.865" classname="api test"></testcase>
   
 </testsuite>
 
