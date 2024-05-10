@@ -93,6 +93,21 @@ describe("My second test suite", () => {
       });
     });
 
+    it.only("Scan table for Kolkata", () => {
+      cy.visit("/");
+      cy.get("tr td:nth-child(3)").each((el, index, list) => {
+        const text = el.text();
+        if (text.includes("Kolkata")) {
+          cy.get("tr td:nth-child(1)")
+            .eq(index)
+            .then(name => {
+              const authorName = name.text();
+              expect(authorName).to.equal("Dwayne");
+            });
+        }
+      });
+    });
+
     it("scan from table find Resume and price", () => {
       cy.visit("/");
       cy.get("tr td:nth-child(2)").each((el, index, list) => {
