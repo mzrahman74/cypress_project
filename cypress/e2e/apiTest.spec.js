@@ -12,4 +12,14 @@ describe("api test with request", () => {
       expect(response.status).to.eq(200);
     });
   });
+  it("api test with post", () => {
+    cy.request("POST", "https://reqres.in/api/users", {
+      name: "morpheus",
+      job: "leader"
+    }).then(response => {
+      expect(response.status).to.eq(201);
+      expect(response.body).to.have.property("job", "leader");
+      cy.log(response);
+    });
+  });
 });
