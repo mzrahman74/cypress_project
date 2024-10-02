@@ -22,4 +22,16 @@ describe("api test with request", () => {
       cy.log(response);
     });
   });
+  it("api get call", () => {
+    cy.request("GET", "https://reqres.in/api/users?page=2").then(response => {
+      expect(response.status).to.eq(200);
+      expect(response.body).to.have.property("total", 12);
+    });
+  });
+  it.only("api test single user", () => {
+    cy.request("GET", "https://reqres.in/api/users/2").then(response => {
+      expect(response.status).to.eql(200);
+      expect(response.body.data).to.have.property("email", "janet.weaver@reqres.in");
+    });
+  });
 });
